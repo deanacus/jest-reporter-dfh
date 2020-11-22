@@ -1,6 +1,6 @@
 {
   "name": "@deanacus/jest-reporter-dfh",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Custom Jest Reporter with minimal output",
   "repository": "<Provide your repository link>",
   "author": "Dean Harris <dean@harris.tc>",
