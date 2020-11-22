@@ -153,7 +153,7 @@ export default class QuietReporter implements Reporter {
 
   renderFailureMessages = () => {
     if (this.state.failureMessages.length) {
-      this.log(bgRed('\n Failures: '));
+      this.log(bgRed.black('\n Failures: '));
       this.log(this.state.failureMessages.join('\n\n'));
     }
   };
@@ -162,7 +162,6 @@ export default class QuietReporter implements Reporter {
     if (this.state.skippedTests.length) {
       this.log(bgYellow.black('\n Skipped Tests: '));
       this.log(this.state.skippedTests.join('\n'));
-      this.log('\n');
     }
   };
 
@@ -171,7 +170,9 @@ export default class QuietReporter implements Reporter {
       suites: { fail, skip, pass, total },
     } = this.state;
     this.log(
-      `${title('Test Suites')} ${failed(fail)} ${skipped(skip)} ${passed(pass)} ${totaled(total)}`,
+      `${title('\nTest Suites')} ${failed(fail)} ${skipped(skip)} ${passed(pass)} ${totaled(
+        total,
+      )}`,
     );
   };
 

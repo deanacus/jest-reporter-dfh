@@ -57,7 +57,7 @@ class QuietReporter {
         };
         this.renderFailureMessages = () => {
             if (this.state.failureMessages.length) {
-                this.log(chalk_1.bgRed('\n Failures: '));
+                this.log(chalk_1.bgRed.black('\n Failures: '));
                 this.log(this.state.failureMessages.join('\n\n'));
             }
         };
@@ -65,12 +65,11 @@ class QuietReporter {
             if (this.state.skippedTests.length) {
                 this.log(chalk_1.bgYellow.black('\n Skipped Tests: '));
                 this.log(this.state.skippedTests.join('\n'));
-                this.log('\n');
             }
         };
         this.renderSuitesStatus = () => {
             const { suites: { fail, skip, pass, total }, } = this.state;
-            this.log(`${title('Test Suites')} ${failed(fail)} ${skipped(skip)} ${passed(pass)} ${totaled(total)}`);
+            this.log(`${title('\nTest Suites')} ${failed(fail)} ${skipped(skip)} ${passed(pass)} ${totaled(total)}`);
         };
         this.renderTestsStatus = () => {
             const { tests: { fail, skip, pass, total }, } = this.state;
