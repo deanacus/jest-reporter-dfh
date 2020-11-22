@@ -1,10 +1,9 @@
 # Jest Reporter DFH
 
-A custom jest reporter built for @deanacus/dfhscripts and other specific use
-cases.
+A custom jest reporter built for @deanacus/dfhscripts and other specific use cases.
 
-Displays a pretty green tick for passed tests, a warning circle for skipped
-tests, and a scary red cross for failures.
+Displays a pretty green tick for passed tests, a warning circle for skipped tests, and a scary red
+cross for failures.
 
 Also reports on skipped individual tests and skipped test suites.
 
@@ -50,5 +49,4 @@ module.exports = {
 
 ---
 
-Built from
-[ryparker/jest-reporter-template](https://github.com/ryparker/jest-reporter-template)
+Built with [ryparker/jest-reporter-template](https://github.com/ryparker/jest-reporter-template)
